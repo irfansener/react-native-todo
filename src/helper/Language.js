@@ -1,0 +1,102 @@
+import { NativeModules } from "react-native";
+let langRegionLocale = "en_US";
+langRegionLocale = NativeModules.I18nManager.localeIdentifier || "";
+let langCode = langRegionLocale.substring(0, 2); // get first two characters
+
+function Language(value) {
+    const lang = {
+        en: {
+            tooWork: 'A lot of work to do today.',
+            letsDone: "Lets do it.",
+            noWork: "Relax or have fun.",
+            toDo: 'To Do',
+            daysNoWork: ' there is no work you need to do ',
+            addNewTask: 'Add New Task',
+            editTask: 'Edit task',
+            nameRequired: 'Task name can not be empty !',
+            taskName: "Task Name",
+            location: "Location",
+            hour: 'Hour',
+            add: 'Add',
+            edit: 'Edit',
+            loading: 'Loading',
+            done: 'Done',
+            cancel: 'Cancel',
+            january: 'January',
+            february: 'February',
+            march: 'March',
+            april: 'April',
+            may: 'May',
+            june: 'June',
+            july: 'July',
+            august: 'August',
+            september: 'September',
+            october: 'October',
+            november: 'November',
+            december: 'December',
+            sunday: 'Sunday',
+            monday: 'Monday',
+            tuesday: 'Tuesday',
+            wednesday: 'Wednesday',
+            thursday: 'Thursday',
+            friday: 'Friday',
+            saturday: 'Saturday',
+            sun: 'Sun',
+            mon: 'Mon',
+            tue: 'Tue',
+            wed: 'Web',
+            thu: 'Thu',
+            fri: 'Fri',
+            sat: 'Sat'
+        },
+        tr: {
+            tooWork: 'Bugün yapılacak çok iş var.',
+            letsDone: "Hadi bitirelim şu işi.",
+            noWork: "Rahatla,dinlen ya da eğlen.",
+            toDo: 'Yapılacaklar',
+            daysNoWork: 'günü yapmanız gereken hiçbir şey yok.',
+            addNewTask: 'Yeni Görev Ekle',
+            editTask: 'Görevi Düzenle',
+            nameRequired: 'Görev adı boş bırakılamaz !',
+            taskName: "Görev Adı",
+            location: "Mekan",
+            hour: 'Saat',
+            add: 'Ekle',
+            edit: 'Düzenle',
+            loading: 'Bekliyor',
+            done: 'Tamamlandı',
+            cancel: 'İptal edildi',
+            january: 'Ocak',
+            february: 'Şubat',
+            march: 'Mart',
+            april: 'Nisan',
+            may: 'Mayıs',
+            june: 'Haziran',
+            july: 'Temmuz',
+            august: 'Ağustos',
+            september: 'Eylül',
+            october: 'Ekim',
+            november: 'Kasım',
+            december: 'Aralık',
+            sunday: 'Pazar',
+            monday: 'Pazartesi',
+            tuesday: 'Salı',
+            wednesday: 'Çarşamba',
+            thursday: 'Perşembe',
+            friday: 'Cuma',
+            saturday: 'Cumartesi',
+            sun: 'Paz',
+            mon: 'Pzt',
+            tue: 'sal',
+            wed: 'Çar',
+            thu: 'Sal',
+            fri: 'Cum',
+            sat: 'Cmt'
+        }
+    }
+    const isAvailableLang = langCode === 'tr' || langCode === 'en';
+    const returnValue = isAvailableLang ? eval(`lang.${langCode}.${value}`) : eval(`lang.en.${value}`);
+    return returnValue;
+}
+
+export default Language;
