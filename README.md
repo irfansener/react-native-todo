@@ -12,7 +12,7 @@ react-native eject
 # native dosyalar için gerekli düzenlemeleri yapar
 react-native link
 
-# build for production and view the bundle analyzer report
+# emülatör üzerinden uygulamayı çalıştırmanızı sağlar
 react-native run-android
 react-native run-ios
 ```
