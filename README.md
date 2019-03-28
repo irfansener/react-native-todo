@@ -7,7 +7,7 @@ Very lightweight and smooth design todo app with react-native
 # Install necessary packages
 yarn install
 
-# Create android&ios file
+# Create android&ios folder
 react-native eject
 
 # Update native files
