@@ -1,18 +1,19 @@
 # react-native-todo
-React-native ile yazılmış. Sade ve kullanışlı arayüze sahip todo-list uygulaması.
+Very lightweight and smooth design todo app with react-native
 
-## Nasıl kurulur ?
+
+## How to install ?
 ``` bash
-# Gerekli paketleri yükler
+# Install necessary packages
 yarn install
 
-# android ve ios klasörlerini oluşturur
+# Create android&ios file
 react-native eject
 
-# native dosyalar için gerekli düzenlemeleri yapar
+# Update native files
 react-native link
 
-# emülatör üzerinden uygulamayı çalıştırmanızı sağlar
+# Run app on emulator
 react-native run-android
 react-native run-ios
 ```
